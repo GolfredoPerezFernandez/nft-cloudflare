@@ -4,8 +4,9 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
-
+} from "@remix-run/react"
+import "./globals.css"
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -16,7 +17,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <BackgroundGradientAnimation className="h-full w-full">
+          <div className="p-4 relative z-[2] lg:p-8 container h-full">
+            {children}
+          </div>
+        </BackgroundGradientAnimation>
         <ScrollRestoration />
         <Scripts />
       </body>
