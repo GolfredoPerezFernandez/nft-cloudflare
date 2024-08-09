@@ -2,7 +2,7 @@ import { CardStack } from "@/components/ui/card-stack";
 import { cn } from "@/lib/utils";
 export default function SecondSection() {
   return (
-    <div className="grid w-full lg:grid-cols-[300px_1fr]">    
+    <div data-aos="fade-left" className="grid w-full lg:grid-cols-[300px_1fr] my-44">    
         <div className="flex items-center justify-center">
             <CardStack items={CARDS} />
         </div>

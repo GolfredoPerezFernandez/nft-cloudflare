@@ -1,7 +1,7 @@
 import { GlareCard } from "@/components/ui/glare-card";
 export default function ThirdSection() {
   return (
-    <div className="grid w-full lg:grid-cols-2 my-28">    
+    <div data-aos="fade-down-right" className="grid w-full lg:grid-cols-2 my-28">    
     <div className="xl font-bold text-white dark:text-white max-w-4xl leading-relaxed lg:leading-snug mx-auto my-4 z-40 flex flex-col items-center lg:items-start justify-center">
         <span className="text-[16px] font-medium text-white dark:text-white max-w-4xl leading-relaxed lg:leading-snug mx-auto lg:text-4xl">
           MEET THE MOST <span className="text-green-500">EXPERIENCED</span> IN THE WORLD

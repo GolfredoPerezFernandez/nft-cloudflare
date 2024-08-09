@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Highlight } from "@/components/ui/hero-highlight";
-
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 export default function FirstSection() {
   return (
-    <div className="my-20 md:my-40 w-full flex flex-col md:flex-row items-start">
+    <div data-aos="fade-up-right" className="my-20 md:my-40 w-full flex flex-col md:flex-row items-start">
       {/* Contenedor con línea vertical y texto */}
       <div className="flex items-start md:space-x-4">
         {/* Línea verde vertical */}
@@ -36,9 +36,12 @@ export default function FirstSection() {
             </Highlight>
           </motion.h1>
           <div className="text-sm md:text-base xl font-bold text-white dark:text-white max-w-full md:max-w-4xl leading-relaxed lg:leading-snug mx-auto my-4 z-40">
-            <p className="text-[14px] md:text-[16px] font-medium text-white dark:text-white max-w-full md:max-w-4xl leading-relaxed lg:leading-snug mx-auto">
+            <TextGenerateEffect 
+           className="text-white"
+            words="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates sunt distinctio esse. Esse voluptatibus laborum dignissimos minima architecto placeat ipsam praesentium? Delectus, odit itaque doloribus praesentium labore alias quibusdam ipsa!"/>
+            {/* <p className="text-[14px] md:text-[16px] font-medium text-white dark:text-white max-w-full md:max-w-4xl leading-relaxed lg:leading-snug mx-auto">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates sunt distinctio esse. Esse voluptatibus laborum dignissimos minima architecto placeat ipsam praesentium? Delectus, odit itaque doloribus praesentium labore alias quibusdam ipsa!
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
