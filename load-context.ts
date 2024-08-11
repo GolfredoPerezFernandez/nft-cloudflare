@@ -23,7 +23,8 @@ export const getLoadContext: GetLoadContext = async ({ context }) => {
   return {
     ...context,
     db: await connection(
-      context.cloudflare.env.RemixPrismaD1,
+      context.cloudflare.env.DB,
     ),
   }
 }
+ 

@@ -20,39 +20,24 @@ export function SidebarComponent({ children }: Props) {
 
   const links = [
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "Home",
+      href: "/",
       icon: (
         <IconBrandTabler className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Subcontractors",
-      href: "/dashboard/subcontractor",
+      label: "Task",
+      href: "/task",
+      icon: (
+        <IconSettings className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
+      label: "Profile",
+      href: "/profile",
       icon: (
         <IconUserBolt className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
-    {
-      label: "Workers",
-      href: "/dashboard/workers",
-      icon: (
-        <IconSettings className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
-    {
-      label: "Settings",
-      href: "/dashboard/settings",
-      icon: (
-        <IconSettings className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
-    
-    {
-      label: "Logout",
-      href: "#",
-      icon: (
-        <IconArrowLeft className="text-white dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
   ];
@@ -101,7 +86,7 @@ export function SidebarComponent({ children }: Props) {
         </SidebarBody>
       </Sidebar>
       <div className="flex flex-1">
-        <div className="p-2 md:p-10border-neutral-200 dark:border-neutral-700 bg-transparent dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
+        <div className="p-2 md:p-10 border-neutral-200 dark:border-neutral-700 bg-transparent dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
           {
             children
           }
@@ -124,7 +109,7 @@ export const Logo = () => {
         animate={{ opacity: 1 }}
         className="font-medium text-white dark:text-white whitespace-pre"
       >
-        Teeqode
+        Breakdown
       </motion.span>
     </Link>
   );

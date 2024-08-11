@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-      <footer className="bg-moving-gradient text-white py-6">
+      <footer className=" text-white py-6">
         <div className="container mx-auto px-4 flex flex-col items-center">
           <div className="text-center mb-4">
             <h1 className="text-2xl font-bold">Your Company</h1>

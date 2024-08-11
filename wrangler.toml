@@ -1,3 +1,6 @@
-d1_databases = [
-  { binding = "RemixPrismaD1", database_name = "RemixPrismaD1", database_id = "test-db-id" }
-]
+name = "nft-project"
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "d1-nft"
+database_id = "4d125ca5-c942-4348-ab35-66aad0058022"
