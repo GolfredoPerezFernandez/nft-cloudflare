@@ -113,7 +113,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body><WagmiProvider config={config}>
+      <body>
+        <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider theme={myCustomTheme} >
         
@@ -137,9 +138,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+
 
   return <Outlet />;
 }
