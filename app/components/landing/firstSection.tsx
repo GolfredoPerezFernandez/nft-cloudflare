@@ -12,7 +12,7 @@ export default function FirstSection() {
         <div className="flex flex-col space-y-4 max-w-full md:max-w-4xl">
           <div className="text-lg md:text-xl lg:text-2xl font-bold text-white">
             <span className="text-lg md:text-xl font-bold text-white">
-              Welcome to Breakdown
+            Xentro Early Adopters Airdrop
             </span>
           </div>
           <motion.h1
@@ -32,14 +32,14 @@ export default function FirstSection() {
           >
             Get ready to{" "}
             <Highlight className="text-white z-20">
-              break the limits
+            Embrace Early Adoption  
             </Highlight>{" "}
-            and enter the new era. Your journey starts now.
+            and Earn Exclusive Reward
           </motion.h1>
           <div className="text-sm md:text-base font-bold text-white leading-relaxed">
             <TextGenerateEffect 
               className="text-white"
-              words="Complete exciting tasks, earn points, and mint your unique NFT. Are you ready to unlock exclusive rewards? Let's make your mark in the digital world."
+              words="Unlock vast financial opportunities and effortlessly trade, earn interest and borrow assets across multiple blockchains, creating a unified and borderless financial network.."
             />
           </div>
         </div>

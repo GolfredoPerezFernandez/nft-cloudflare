@@ -5,9 +5,9 @@ import { InputSubscribe } from "./inputSubscribe";
 
 const Footer = () => {
     return (
-      <footer className="relative overflow-hidden text-white py-6">
+      <footer className="relative p-20 overflow-hidden text-white py-6">
         {/* Fondo animado con gradiente de colores */}
-        <div className="absolute inset-0 animate-gradient bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#0066FF] via-[#003399] to-[#001133] bg-[200%_200%]"></div>
+        <div className="absolute inset-0 animate-gradient "></div>
         
         <InputSubscribe/>
 

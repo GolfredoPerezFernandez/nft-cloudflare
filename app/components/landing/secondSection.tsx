@@ -3,20 +3,20 @@ import { cn } from "@/lib/utils";
 
 export default function SecondSection() {
   return (
-    <div data-aos="fade-left" className="p-0 grid w-full lg:grid-cols-[300px_1fr] my-20 lg:my-44">
-      <div className="flex items-center justify-left w-full">
+    <div data-aos="fade-left" className=" grid pl-20 w-full lg:grid-cols-[300px_1fr] my-20 lg:my-44">
+      <div className="flex  items-center justify-left w-full">
         <CardStack  items={CARDS} />
       </div>
       <div className="font-bold text-white max-w-4xl leading-relaxed lg:leading-snug mx-auto my-4 z-40 flex flex-col items-center lg:items-right justify-center text-right">
         <div className="w-full">
           <span className="text-[16px] lg:text-4xl mb-4">
-            EMBARK ON YOUR <span className="text-[#0066FF]">BREAKDOWN</span> JOURNEY
+          Gateway to  <span className="text-[#0066FF]">UNTRAD </span> Banking
           </span>
         </div>
         <div className="w-full">
           <p className="lg:pl-40  text-center lg:text-right text-sm md:text-base">
             {
-              `Unlock the potential within. Every task you complete brings you one step closer to mastering the digital frontier. It's time to prove your worth and claim your rewards. The journey isn't easy, but it's worth every challenge.`
+              `Enjoy Finance on a Freeway with Xentro.`
             }
           </p>
         </div>
@@ -46,32 +46,45 @@ export const Highlight = ({
 
 const CARDS = [
   {
-    id: 0,
-    name: "Alice Anderson",
-    designation: "Blockchain Enthusiast",
-    content: (
-      <p>
-        {`This platform is a game-changer. <Highlight>I can't wait to explore</Highlight> all the opportunities it provides. The future of digital engagement is here.`}
-      </p>
-    ),
-  },
-  {
     id: 1,
-    name: "Bob Bailey",
-    designation: "Crypto Pioneer",
+    name: "Decentralized Finance (DeFi) Integration.",
+    designation: "",
     content: (
       <p>
-        {`I've seen many projects, but <Highlight>Breakdown</Highlight> stands out. The integration of tasks and rewards makes it a unique and compelling experience. This is the next big thing.`}
+        {`Seamlessly Connect with the Future of Finance
+Description: Access a wide range of DeFi services directly from our platform, allowing you to earn, borrow, and invest with unprecedented ease and security.`}
       </p>
     ),
   },
   {
     id: 2,
-    name: "Charlie Cooper",
-    designation: "Digital Nomad",
+    name: "Non-Custodial Management.",
+    designation: "Crypto Pioneer",
     content: (
       <p>
-       {`The first step to success is <Highlight>participation</Highlight>. Breakdown offers a straightforward yet challenging way to immerse in the world of blockchain. Let's get started.`}
+        {`Retain Full Control Over Your Assets
+Description: Manage your assets without intermediaries. Xentro’s non-custodial approach ensures that you remain in full control of your funds at all times, enhancing security and autonomy.`}
+      </p>
+    ),
+  },
+  {
+    id: 3,
+    name: "Discover Top-Tier, Secure Yield Options.",
+    designation: "",
+    content: (
+      <p>
+       {`Access a curated selection of exclusive, secure investment opportunities with varying yield potentials, tailored to suit different risk profiles and financial goals.`}
+      </p>
+    ),
+  },
+  {
+    id: 4,
+    name: "Seamless Cross-Chain Bridging.",
+    designation: "",
+    content: (
+      <p>
+       {`Effortlessly Connect Assets Across Blockchains
+Description: Effortlessly move assets between different blockchains, enabling greater flexibility and integration within the decentralized financial ecosystem.`}
       </p>
     ),
   },
