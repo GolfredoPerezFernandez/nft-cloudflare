@@ -45,42 +45,41 @@ const config = getDefaultConfig({
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
 import {  Theme } from '@rainbow-me/rainbowkit';
-
 const myCustomTheme: Theme = {
   blurs: {
     modalOverlay: 'blur(10px)',
   },
   colors: {
-    accentColor: '#0066FF', // Un azul brillante que resalta sobre el fondo oscuro
+    accentColor: '#00FF66', // Un verde brillante que resalta sobre el fondo oscuro
     accentColorForeground: '#FFFFFF', // Blanco para el texto sobre el color de acento
-    actionButtonBorder: '#0055CC', // Un azul ligeramente más oscuro
-    actionButtonBorderMobile: '#0055CC', 
-    actionButtonSecondaryBackground: '#002244', // Azul oscuro para botones secundarios
+    actionButtonBorder: '#00CC52', // Un verde ligeramente más oscuro
+    actionButtonBorderMobile: '#00CC52', 
+    actionButtonSecondaryBackground: '#004422', // Verde oscuro para botones secundarios
     closeButton: '#FFFFFF', // Blanco para los botones de cerrar
-    closeButtonBackground: '#0066FF', // Azul brillante para el fondo del botón de cerrar
-    connectButtonBackground: '#001133', // Un azul oscuro para el fondo del botón de conectar
+    closeButtonBackground: '#00FF66', // Verde brillante para el fondo del botón de cerrar
+    connectButtonBackground: '#003311', // Un verde oscuro para el fondo del botón de conectar
     connectButtonBackgroundError: '#FF0000', // Rojo para errores
-    connectButtonInnerBackground: '#0055CC', // Azul intermedio para el fondo interior del botón
+    connectButtonInnerBackground: '#00CC52', // Verde intermedio para el fondo interior del botón
     connectButtonText: '#FFFFFF', // Blanco para el texto del botón
     connectButtonTextError: '#FF0000', // Rojo para el texto de error
-    connectionIndicator: '#0066FF', // Indicador de conexión en azul brillante
-    downloadBottomCardBackground: '#001122', // Azul muy oscuro para las tarjetas
-    downloadTopCardBackground: '#002244', // Azul oscuro
+    connectionIndicator: '#00FF66', // Indicador de conexión en verde brillante
+    downloadBottomCardBackground: '#002211', // Verde muy oscuro para las tarjetas
+    downloadTopCardBackground: '#003311', // Verde oscuro
     error: '#FF0000', // Rojo para los errores
-    generalBorder: '#002244', // Azul oscuro para los bordes generales
-    generalBorderDim: '#001122', // Azul muy oscuro para bordes suaves
-    menuItemBackground: '#002244', // Fondo de los elementos del menú en azul oscuro
+    generalBorder: '#004422', // Verde oscuro para los bordes generales
+    generalBorderDim: '#002211', // Verde muy oscuro para bordes suaves
+    menuItemBackground: '#003311', // Fondo de los elementos del menú en verde oscuro
     modalBackdrop: 'rgba(0, 0, 0, 0.8)', // Fondo semi-transparente negro para modales
-    modalBackground: '#000822', // Fondo azul muy oscuro para modales
-    modalBorder: '#0066FF', // Borde azul brillante para modales
+    modalBackground: '#001100', // Fondo verde muy oscuro para modales
+    modalBorder: '#00FF66', // Borde verde brillante para modales
     modalText: '#FFFFFF', // Blanco para el texto en modales
     modalTextDim: '#CCCCCC', // Gris claro para texto dimmed en modales
-    modalTextSecondary: '#0066FF', // Azul brillante para texto secundario
-    profileAction: '#002244', // Azul oscuro para acciones de perfil
-    profileActionHover: '#0055CC', // Azul intermedio para hover en acciones de perfil
-    profileForeground: '#0066FF', // Azul brillante para el texto de perfil
-    selectedOptionBorder: '#0066FF', // Azul brillante para el borde de la opción seleccionada
-    standby: '#000822', // Fondo standby en azul muy oscuro
+    modalTextSecondary: '#00FF66', // Verde brillante para texto secundario
+    profileAction: '#004422', // Verde oscuro para acciones de perfil
+    profileActionHover: '#00CC52', // Verde intermedio para hover en acciones de perfil
+    profileForeground: '#00FF66', // Verde brillante para el texto de perfil
+    selectedOptionBorder: '#00FF66', // Verde brillante para el borde de la opción seleccionada
+    standby: '#001100', // Fondo standby en verde muy oscuro
   },
   fonts: {
     body: '"Helvetica Neue", Arial, sans-serif', // Fuente sencilla y moderna
@@ -93,15 +92,14 @@ const myCustomTheme: Theme = {
     modalMobile: '16px',
   },
   shadows: {
-    connectButton: '0px 4px 8px rgba(0, 102, 255, 0.5)', // Sombra azul brillante suave para el botón de conectar
+    connectButton: '0px 4px 8px rgba(0, 255, 102, 0.5)', // Sombra verde brillante suave para el botón de conectar
     dialog: '0px 4px 8px rgba(0, 0, 0, 0.3)', // Sombra ligera para diálogos
-    profileDetailsAction: '0px 4px 8px rgba(0, 102, 255, 0.5)', // Sombra suave azul brillante para acciones de perfil
-    selectedOption: '0px 4px 8px rgba(0, 102, 255, 0.5)', // Sombra azul brillante para la opción seleccionada
-    selectedWallet: '0px 4px 8px rgba(0, 102, 255, 0.5)', // Sombra azul brillante para la billetera seleccionada
-    walletLogo: '0px 4px 8px rgba(0, 102, 255, 0.5)', // Sombra suave para el logo de la billetera
+    profileDetailsAction: '0px 4px 8px rgba(0, 255, 102, 0.5)', // Sombra suave verde brillante para acciones de perfil
+    selectedOption: '0px 4px 8px rgba(0, 255, 102, 0.5)', // Sombra verde brillante para la opción seleccionada
+    selectedWallet: '0px 4px 8px rgba(0, 255, 102, 0.5)', // Sombra verde brillante para la billetera seleccionada
+    walletLogo: '0px 4px 8px rgba(0, 255, 102, 0.5)', // Sombra suave para el logo de la billetera
   },
 };
-
 
 
 export function Layout({ children }: { children: React.ReactNode }) {
