@@ -113,22 +113,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body><WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider theme={myCustomTheme} >
-        
-        <BackgroundGradientAnimation className="h-full w-full">
-          <Navbar/>
-          <SidebarComponent>
-            <div className=" relative z-[2] lg:p-1 w-full container h-full">
-              {children}
-            </div>
-          </SidebarComponent>
-          <Footer/>
-        </BackgroundGradientAnimation>  {/* Your App */}
-        </RainbowKitProvider>
-      </QueryClientProvider>
-    </WagmiProvider>
+      <body>
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          <RainbowKitProvider theme={myCustomTheme} >
+          <BackgroundGradientAnimation className="h-full w-full">
+            <SidebarComponent>
+            <Navbar/>
+              <div className="relative z-[2] w-full h-full lg:container">
+                {children}
+              </div>
+            </SidebarComponent>
+            <Footer/>
+          </BackgroundGradientAnimation>
+          </RainbowKitProvider>
+        </QueryClientProvider>
+      </WagmiProvider>
         <ScrollRestoration />
         <Scripts />
       </body>
