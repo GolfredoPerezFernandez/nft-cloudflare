@@ -73,7 +73,7 @@
     background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 0% 100%;
   }
   100% {
     background-position: 0% 0%;
@@ -81,7 +81,25 @@
 }
 
 .bg-moving-gradient {
-  background: linear-gradient(90deg, #000000, #1b5e20, #000000);
+  background: linear-gradient(180deg, #0066FF, #003399, #0055CC, #3399FF, #99CCFF, #001133, #002244);
   background-size: 200% 200%;
   animation: gradient-move 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.footer-bg {
+  background: linear-gradient(45deg, #0066FF, #003399, #0055CC, #3399FF, #99CCFF, #001133, #002244);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
 }

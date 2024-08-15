@@ -1,8 +1,7 @@
-"use client";
 import React, { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import {
-  IconArrowLeft,
+  // IconArrowLeft,
   IconBrandTabler,
   IconSettings,
   IconUserBolt,
@@ -49,12 +48,12 @@ export function SidebarComponent({ children }: Props) {
       )}
     >
       <Sidebar open={open} setOpen={setOpen}>
-        <SidebarBody className="justify-between gap-10 bg-gradient-to-r border-none fixed top-0 left-0 z-30 bg-opacity-30 bg-[#081c15]/70 backdrop-blur-lg">
+        <SidebarBody className="justify-between gap-10 bg-gradient-to-r border-none fixed top-0 left-0 z-30 bg-opacity-30 bg-moving-gradient  backdrop-blur-lg">
           <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
             <div className="mt-8 flex flex-col gap-2">
               {links.map((link, idx) => (
-                <SidebarLink  key={idx} link={link} />
+                <SidebarLink key={idx} link={link} />
               ))}
             </div>
           </div>
@@ -101,29 +100,34 @@ export const Logo = () => {
   return (
     <Link
       to="#"
-      className="font-normal flex space-x-2 items-center text-sm text-white py-1 relative z-20"
+      className="font-normal flex items-center space-x-2 text-sm text-white py-1 relative z-20"
     >
-      <div className="h-5 w-6 bg-white dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <div className="h-10 w-10 bg-white dark:bg-white rounded-full flex-shrink-0 overflow-hidden">
+        <img src="/public/logo.png" alt="logo" className="w-full h-full object-cover"/>
+      </div>
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="font-medium text-white dark:text-white whitespace-pre"
       >
-        Breakdown
+        XENTRO
       </motion.span>
     </Link>
   );
 };
+
 export const LogoIcon = () => {
   return (
     <Link
       to="#"
-      className="font-normal flex space-x-2 items-center text-sm text-white py-1 relative z-20"
+      className="font-normal flex items-center text-sm text-white py-1 relative z-20"
     >
-      <div className="h-5 w-6 bg-white dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <div className="h-6 w-6 bg-white dark:bg-white rounded-full flex-shrink-0 overflow-hidden">
+        <img src="/public/logo.png" alt="logo" className="w-full h-full object-cover"/>
+      </div>
     </Link>
   );
-};
+}
  
 // Dummy dashboard component with content
 // const Dashboard = () => {

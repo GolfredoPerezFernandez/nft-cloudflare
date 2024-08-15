@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-"use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -30,6 +29,7 @@ export const CardStack = ({
 
     return () => clearInterval(interval);
   }, []);
+
   const startFlipping = () => {
     interval = setInterval(() => {
       setCards((prevCards: Card[]) => {
@@ -41,15 +41,15 @@ export const CardStack = ({
   };
 
   return (
-    <div className="relative h-60 w-60 md:h-60 md:w-96">
+    <div className="relative h-60 w-full md:h-60 md:w-96">
       {cards.map((card, index) => {
         return (
           <motion.div
             key={card.id}
-            className="absolute h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between"
+            className="absolute h-60 w-full md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-[#001133] dark:border-[#99CCFF]/[0.1] shadow-[#003399]/[0.1] dark:shadow-[#3399FF]/[0.05] flex flex-col justify-between"
             style={{
               transformOrigin: "top center",
-              background: `linear-gradient(135deg, #000000 0%, #003300 100%)`, // Gradiente negro a verde oscuro
+              background: `linear-gradient(135deg, #0066FF 0%, #002244 100%)`, // Gradiente de Azul Brillante a Azul Neutro
             }}
             animate={{
               top: index * -CARD_OFFSET,

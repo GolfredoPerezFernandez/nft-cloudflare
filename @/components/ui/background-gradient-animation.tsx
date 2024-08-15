@@ -1,17 +1,16 @@
 /* eslint-disable react/prop-types */
-"use client";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
-  gradientBackgroundStart = "#000033", // Cambiado a un azul oscuro
-  gradientBackgroundEnd = "#000066", // Cambiado a un azul ligeramente más claro
-  firstColor = "0, 0, 255", // Azul brillante
-  secondColor = "0, 0, 200", // Azul medio
-  thirdColor = "0, 100, 255", // Azul cielo
-  fourthColor = "0, 50, 200", // Azul más oscuro
-  fifthColor = "0, 150, 255", // Azul claro
-  pointerColor = "0, 100, 255", // Azul para el puntero
+  gradientBackgroundStart = "#001133", // Azul Muy Oscuro
+  gradientBackgroundEnd = "#002244",   // Azul Neutro
+  firstColor = "0, 102, 255",          // Azul Brillante
+  secondColor = "0, 51, 153",          // Azul Oscuro
+  thirdColor = "0, 85, 204",           // Azul Medio
+  fourthColor = "51, 153, 255",        // Azul Claro
+  fifthColor = "153, 204, 255",        // Azul Muy Claro
+  pointerColor = "0, 102, 255",        // Azul Brillante
   size = "80%",
   blendingValue = "screen",
   children,
@@ -29,7 +28,7 @@ export const BackgroundGradientAnimation = ({
   pointerColor?: string;
   size?: string;
   blendingValue?: string;
-  children?: React.ReactNode;  // Cambiado de 'any' a 'React.ReactNode'
+  children?: React.ReactNode;
   className?: string;
   interactive?: boolean;
   containerClassName?: string;

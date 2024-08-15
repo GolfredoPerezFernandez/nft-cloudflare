@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/prop-types */
 import { cn } from "@/lib/utils";
 import { Link, LinkProps } from "@remix-run/react";
 import React, { useState, createContext, useContext } from "react";
@@ -28,6 +28,7 @@ export const useSidebar = () => {
   if (!context) {
     throw new Error("useSidebar must be used within a SidebarProvider");
   }
+
   return context;
 };
 
@@ -117,7 +118,7 @@ export const MobileSidebar = ({
     <>
       <div
         className={cn(
-          "h-10 px-4 py-4 flex flex-row md:hidden  items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
+          "h-10 z-30 px-4 py-4 flex flex-row md:hidden  items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
         )}
         {...props}
       >
@@ -142,12 +143,14 @@ export const MobileSidebar = ({
                 className
               )}
             >
-            
+              
               <div
-                className="absolute right-10 top-10 z-50 text-neutral-800 dark:text-neutral-200"
-                onClick={() => setOpen(!open)}
+                className="absolute right-10 top-10 z-40  text-neutral-800 dark:text-neutral-200"
+                // onClick={() => alert("ssssss")}
               >
-                <IconX />
+                <button className=" text-white" onClick={() => setOpen(!open)}>
+                  <IconX color="white"/>
+                </button>
               </div>
               {children}
             </motion.div>
