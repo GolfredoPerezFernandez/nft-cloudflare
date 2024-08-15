@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
+import { TaskComponent } from "~/components/task/taskComponent";
 export const meta: MetaFunction = () => {
   return [
     { title: "landing" },
@@ -11,8 +12,8 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="pr-20 pl-20">
-      <h1>sssss</h1>
+    <div className="w-fit m-auto p-7 rounded-2xl bg-white">
+      <TaskComponent/>
     </div>
   );
 }
