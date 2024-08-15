@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export default function SecondSection() {
   return (
-    <div data-aos="fade-left" className=" grid pl-20 w-full lg:grid-cols-[300px_1fr] my-20 lg:my-44">
+    <div data-aos="fade-left" className=" grid lg:p-8 w-full lg:grid-cols-[300px_1fr] my-20 lg:my-44">
       <div className="flex  items-center justify-left w-full">
         <CardStack  items={CARDS} />
       </div>
