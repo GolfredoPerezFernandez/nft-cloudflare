@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export default function SecondSection() {
   return (
-    <div data-aos="fade-left" className=" grid lg:p-8 w-full lg:grid-cols-[300px_1fr] my-20 lg:my-44">
+    <div data-aos="fade-left" className=" grid sm:p-0 lg:p-8 w-full lg:grid-cols-[300px_1fr] my-20 lg:my-44">
       <div className="flex  items-center justify-left w-full">
         <CardStack  items={CARDS} />
       </div>
@@ -59,7 +59,7 @@ Description: Access a wide range of DeFi services directly from our platform, al
   {
     id: 2,
     name: "Non-Custodial Management.",
-    designation: "Crypto Pioneer",
+    designation: "",
     content: (
       <p>
         {`Retain Full Control Over Your Assets

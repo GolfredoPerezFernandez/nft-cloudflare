@@ -5,13 +5,13 @@ import { InputSubscribe } from "./inputSubscribe";
 
 const Footer = () => {
     return (
-      <footer className="relative p-20 overflow-hidden text-white py-6">
+      <footer className="relative   p-0 overflow-hidden text-white py-6">
         {/* Fondo animado con gradiente de colores */}
         <div className="absolute inset-0 animate-gradient "></div>
         
         <InputSubscribe/>
 
-        <div className="container mx-auto px-4 flex flex-col items-center relative z-10">
+        <div className="pl-20 pr-20 container mx-auto px-4 flex flex-col items-center relative z-10">
           <div className="flex flex-col lg:flex-row lg:gap-7 items-center justify-between w-full my-10">
             <div className="flex gap-4">
               <a href="#" className="text-white hover:underline">Terms and conditions</a>

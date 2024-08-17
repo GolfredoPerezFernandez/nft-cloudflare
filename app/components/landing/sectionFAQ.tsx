@@ -6,7 +6,7 @@ import {
   } from "@/components/ui/accordion"
 export default function SectionFAQ() {
   return (
-    <Accordion type="single" collapsible className="w-full p-20">
+    <Accordion type="single" collapsible className="w-full p-4 lg:p-20">
         <AccordionItem value="item-1">
         <AccordionTrigger className="text-white">What is Xentro?</AccordionTrigger>
         <AccordionContent className="text-white">

@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "@remix-run/react"
 import "./globals.css"
 
@@ -100,11 +101,24 @@ const myCustomTheme: Theme = {
     walletLogo: '0px 4px 8px rgba(0, 255, 102, 0.5)', // Sombra suave para el logo de la billetera
   },
 };
+import { type IStaticMethods } from "preline/preline";
+declare global {
+  interface Window {
+    HSStaticMethods: IStaticMethods;
+  }
+}
+if (typeof window !== "undefined") {
+  require("preline/preline");
+}
 
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const queryClient = new QueryClient();
+  const location = useLocation();
 
+  useEffect(() => {
+    window.HSStaticMethods.autoInit();
+  }, [location.pathname]);
   return (
     <html lang="en">
       <head>
@@ -117,15 +131,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
           <RainbowKitProvider theme={myCustomTheme} >
-          <BackgroundGradientAnimation className="h-full w-full">
-            <SidebarComponent>
-            <Navbar/>
+          <div className="h-full w-full flex flex-col bg-black">
               <div className="relative z-[2] w-full h-full lg:container">
                 {children}
               </div>
-            </SidebarComponent>
             <Footer/>
-          </BackgroundGradientAnimation>
+          </div>
           </RainbowKitProvider>
         </QueryClientProvider>
       </WagmiProvider>
