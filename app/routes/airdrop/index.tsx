@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
+import AirdropFAQ from "~/components/landing/airdropFAQ";
 import ThirdSection from "~/components/landing/thirdSection";
 import { TaskComponent } from "~/components/task/taskComponent";
 export const meta: MetaFunction = () => {
@@ -20,6 +21,9 @@ export default function Index() {
       <p className="text-3xl lg:text-4xl font-bold text-black text-center mt-40 mb-[-80px] w-full">NFT REWARD</p>
 
       <ThirdSection/>
+      <p className="text-3xl lg:text-4xl font-bold text-black text-center mt-40 w-full">Frecuently Asked Questions</p>
+
+      <AirdropFAQ/>
 
     </div>
   );
