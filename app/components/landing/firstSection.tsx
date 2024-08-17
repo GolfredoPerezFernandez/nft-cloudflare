@@ -4,13 +4,13 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export default function FirstSection() {
   return (
-    <div className="my-10 md:my-20 lg:my-40 w-full flex flex-col items-start">
+    <div className="w-full flex flex-col items-start container">
       {/* Contenedor con línea vertical y texto */}
       <div className="flex flex-col md:flex-row items-start md:space-x-4 w-full px-4 md:px-8">
         {/* Línea verde vertical */}
         <div className="w-[2px] bg-[#0066FF] h-16 md:h-auto self-start md:self-stretch mb-4 md:mb-0 hidden lg:flex "></div>
         <div className="flex flex-col space-y-4 max-w-full md:max-w-4xl">
-          <div className="text-lg md:text-xl lg:text-2xl font-bold text-white">
+          <div className="text-lg md:text-xl lg:text-2xl font-bold">
             <span className="text-lg md:text-xl font-bold text-white">
             Xentro Early Adopters Airdrop
             </span>

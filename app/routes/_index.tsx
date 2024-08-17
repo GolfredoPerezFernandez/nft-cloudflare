@@ -3,6 +3,8 @@ import FirstSection from "~/components/landing/firstSection";
 import SecondSection from "~/components/landing/secondSection";
 import ThirdSection from "~/components/landing/thirdSection";
 import SectionFAQ from "~/components/landing/sectionFAQ";
+import DivideComponent from "~/components/landing/divideComponent";
+import Sectionheader from "~/components/landing/sectionheader";
  
 export const meta: MetaFunction = () => {
   return [
@@ -17,7 +19,9 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div>
-      <FirstSection/>
+      <Sectionheader/>
+      <DivideComponent/>
+      {/* <FirstSection/> */}
       <SecondSection/>
       <ThirdSection/>
       <div data-aos="fade-down-right" className="w-full">
