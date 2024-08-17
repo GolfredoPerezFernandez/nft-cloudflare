@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../../hooks/use-outside-click.ts";
- 
+
 export function TaskComponent() {
     const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
       null
@@ -14,19 +14,19 @@ export function TaskComponent() {
           setActive(false);
         }
       }
-   
+
       if (active && typeof active === "object") {
         document.body.style.overflow = "hidden";
       } else {
         document.body.style.overflow = "auto";
       }
-   
+
       window.addEventListener("keydown", onKeyDown);
       return () => window.removeEventListener("keydown", onKeyDown);
     }, [active]);
-   
+
     useOutsideClick(ref, () => setActive(null));
-   
+
     return (
       <>
         <AnimatePresence>
@@ -77,7 +77,7 @@ export function TaskComponent() {
                     className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                   />
                 </motion.div>
-   
+
                 <div>
                   <div className="flex justify-between items-start p-4">
                     <div className="">
@@ -94,7 +94,7 @@ export function TaskComponent() {
                         {active.description}
                       </motion.p>
                     </div>
-   
+
                     <motion.a
                       layoutId={`button-${active.title}-${id}`}
                       href={active.ctaLink}
@@ -167,7 +167,7 @@ export function TaskComponent() {
       </>
     );
   }
- 
+
   export const CloseIcon = () => {
     return (
       <motion.svg
@@ -216,7 +216,7 @@ export function TaskComponent() {
               Instagram is a popular social media platform where you can share photos and videos with your followers. It's a great place to connect with friends, discover new trends, and stay updated with the latest content from your favorite celebrities and brands. Follow us to see our latest updates and exclusive content!
             `
             }
-          
+
           </p>
         );
       },
@@ -235,7 +235,7 @@ export function TaskComponent() {
                  Facebook is a widely used social networking site where you can connect with friends, family, and communities. It allows you to share updates, photos, and events, and stay informed about what's happening around the world. Like our page to receive our latest updates and engage with our content!
                 `
             }
-           
+
           </p>
         );
       },
