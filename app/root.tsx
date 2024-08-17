@@ -7,15 +7,16 @@ import {
 } from "@remix-run/react"
 import "./globals.css"
 
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { SidebarComponent } from "./components/globals/sidebarComponent";
+// import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+// import { SidebarComponent } from "./components/globals/sidebarComponent";
 import Footer from "./components/globals/footer";
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 import stylesheet from '~/globals.css?url';
 import { LinksFunction } from "@remix-run/cloudflare";
-import { Navbar } from "@/components/ui/navbar";
+// import { Connect } from "@/components/ui/connect";
+import Navbar from "./components/globals/navbar";
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
@@ -117,15 +118,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
           <RainbowKitProvider theme={myCustomTheme} >
-          <BackgroundGradientAnimation className="h-full w-full">
-            <SidebarComponent>
-            <Navbar/>
-              <div className="relative z-[2] w-full h-full lg:container">
+          {/* <BackgroundGradientAnimation className="h-full w-full"> */}
+            {/* <SidebarComponent> */}
+              {/* <Connect/> */}
+              <div className="relative z-[2] w-full h-full">
+                <Navbar/>
+
                 {children}
               </div>
-            </SidebarComponent>
+            {/* </SidebarComponent> */}
             <Footer/>
-          </BackgroundGradientAnimation>
+          {/* </BackgroundGradientAnimation> */}
           </RainbowKitProvider>
         </QueryClientProvider>
       </WagmiProvider>

@@ -3,18 +3,18 @@ import { cn } from "@/lib/utils";
 
 export default function SecondSection() {
   return (
-    <div data-aos="fade-left" className=" grid pl-20 w-full lg:grid-cols-[300px_1fr] my-20 lg:my-44">
+    <div data-aos="fade-left" className=" grid pl-20 w-full lg:grid-cols-[300px_1fr] my-20 lg:my-44 container">
       <div className="flex  items-center justify-left w-full">
         <CardStack  items={CARDS} />
       </div>
-      <div className="font-bold text-white max-w-4xl leading-relaxed lg:leading-snug mx-auto my-4 z-40 flex flex-col items-center lg:items-right justify-center text-right">
+      <div className="font-bold text-black max-w-4xl leading-relaxed lg:leading-snug mx-auto my-4 z-40 flex flex-col items-center lg:items-right justify-center text-right">
         <div className="w-full">
           <span className="text-[16px] lg:text-4xl mb-4">
           Gateway to  <span className="text-[#0066FF]">UNTRAD </span> Banking
           </span>
         </div>
         <div className="w-full">
-          <p className="lg:pl-40  text-center lg:text-right text-sm md:text-base">
+          <p className="lg:pl-40 text-black text-center lg:text-right text-sm md:text-base">
             {
               `Enjoy Finance on a Freeway with Xentro.`
             }
