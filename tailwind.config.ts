@@ -4,7 +4,6 @@ const config = {
   darkMode: ["class"],
   
   content: [
-    './node_modules/preline/preline.js',
 
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',

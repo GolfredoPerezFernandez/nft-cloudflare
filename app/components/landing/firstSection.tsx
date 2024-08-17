@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
 import { Highlight } from "@/components/ui/hero-highlight";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { Link } from "@remix-run/react";
 
 export default function FirstSection() {
   return (
-    <div className="my-10 md:my-20 lg:my-40 w-full flex flex-col items-start">
+    <div className="w-full flex flex-col items-start container">
       {/* Contenedor con línea vertical y texto */}
       <div className="flex flex-col md:flex-row items-start md:space-x-4 w-full px-4 md:px-8">
         {/* Línea verde vertical */}
         <div className="w-[2px] bg-[#0066FF] h-16 md:h-auto self-start md:self-stretch mb-4 md:mb-0 hidden lg:flex "></div>
         <div className="flex flex-col space-y-4 max-w-full md:max-w-4xl">
-          <div className="text-lg md:text-xl lg:text-2xl font-bold text-white">
+          <div className="text-lg md:text-xl lg:text-2xl font-bold">
             <span className="text-lg md:text-xl font-bold text-white">
             Xentro Early Adopters Airdrop
             </span>
@@ -42,6 +43,13 @@ export default function FirstSection() {
               words="Unlock vast financial opportunities and effortlessly trade, earn interest and borrow assets across multiple blockchains, creating a unified and borderless financial network.."
             />
           </div>
+          <button className="p-[3px] relative w-60">
+            <Link to="/ta">
+  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+  <div className="px-8 py-2  bg-black rounded-[6px] font-bold relative group transition duration-200 text-white hover:bg-transparent">
+    Explore Task
+  </div></Link>
+</button>
         </div>
       </div>
     </div>
