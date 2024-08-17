@@ -17,7 +17,7 @@ export function InputSubscribe() {
   };
   return (
     <div className="h-[15rem]  w-full lg:max-w-[800px] m-auto flex flex-col justify-center  items-center px-4 border-b border-white">
-      <h2 className="text-xl text-center sm:text-5xl dark:text-white text-black my-5 z-20">
+      <h2 className="text-xl text-center sm:text-5xl dark:text-white text-white my-5 z-20">
         Subscribe
       </h2>
       <PlaceholdersAndVanishInput
